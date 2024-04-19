@@ -4,6 +4,7 @@ lista_valores = [19,19,29,22,23,19,30,19,19,19,20,20,20,18,22,19,34,34,21,21,22,
 
 #esta funcion recibe una lista de valores y retorna un DataFrame con el analisis estadistico
 def analisis_estadistico(lista_valores):
+    lista_valores = sorted(lista_valores)
     if not lista_valores:
         return None
     # Calcular frecuencias absolutas solo para los valores presentes en la lista
