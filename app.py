@@ -1,10 +1,7 @@
 import pandas as pd
 
-# esta funcion lee un archivo csv y retorna una lista con los valores de la columna edades
-def lista(csv_file, edades):
-    df = pd.read_csv(csv_file)
-    lista_valores = df[edades].tolist()
-    return lista_valores
+lista_valores = [19,19,29,22,23,19,30,19,19,19,20,20,20,18,22,19,34,34,21,21,22,28,29,19,20,19,25,28,21,22]
+
 #esta funcion recibe una lista de valores y retorna un DataFrame con el analisis estadistico
 def analisis_estadistico(lista_valores):
     if not lista_valores:
@@ -29,8 +26,5 @@ def analisis_estadistico(lista_valores):
     return df
 
 # Ejemplo de uso
-csv_file = "edades.csv"
-column_name = "edades"
-lista_valores = lista(csv_file, column_name)
 df_resultado = analisis_estadistico(lista_valores)
 print("Resultado del análisis estadístico:\n", df_resultado)
